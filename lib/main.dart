@@ -35,180 +35,185 @@ void main() {
            ),
            backgroundColor: Colors.teal,
          ),
-         body: Column(
-           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-           children: [
-             Row(
-               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-               children: [
-                 Container(
-                   height: 450,
-                   child: Column(
-                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                     children: [
-                       const Text(
-                         'Team A',
-                         style: TextStyle(
-                           fontSize: 25,
-                           color: Colors.black,
-                         ),
-                       ),
-                       Text(
-                         '$teamAPoints',
-                         style: const TextStyle(
-                           fontSize: 90,
-                           color: Colors.black,
-                         ),
-                       ),
-                       ElevatedButton(
-                         style: ElevatedButton.styleFrom(
-                           backgroundColor: Colors.teal,
-                           minimumSize: const Size(120, 50),
-                         ),
-                         onPressed: () {
-                           setState(() {
-                             teamAPoints++;
-                            // print(teamAPoints);
-                           });
-                         },
-                         child: const Text('Add 1 Point',style: TextStyle(
-                           color: Colors.black,
-                           fontSize: 18,
-                         ),),
-                       ),
-                       ElevatedButton(
-                         style: ElevatedButton.styleFrom(
-                           backgroundColor: Colors.teal,
-                           minimumSize: const Size(120, 50),
-                         ),
-                         onPressed: () {
-                           setState(() {
-                             teamAPoints+=2;
-                            // print(teamAPoints);
-                           });
-                         },
-                         child: const Text('Add 2 Point',style: TextStyle(
-                           color: Colors.black,
-                           fontSize: 18,
-                         ),),
-                       ),
-                       ElevatedButton(
-                         style: ElevatedButton.styleFrom(
-                           backgroundColor: Colors.teal,
-                           minimumSize: const Size(120, 50),
-                         ),
-                         onPressed: () {
-                           setState(() {
-                             teamAPoints+=3;
-                            // print(teamAPoints);
-                           });
-                         },
-                         child: const Text('Add 3 Point',style: TextStyle(
-                           color: Colors.black,
-                           fontSize: 18,
-                         ),),
-                       ),
-                     ],
-                   ),
-                 ),
-                 Container(
-                   height: 450,
-                   child: const VerticalDivider(
-                     color: Colors.grey,
-                     thickness: 1,
-                     indent: 50,
-                     endIndent: 50,
-                   ),
-                 ),
-                 Container(
-                   height: 450,
-                   child: Column(
-                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                     children: [
-                       const Text(
-                         'Team B',
-                         style: TextStyle(
-                           fontSize: 25,
-                           color: Colors.black,
-                         ),
-                       ),
-                       Text(
-                         '$teamBPoints',
-                         style: const TextStyle(
-                           fontSize: 90,
-                           color: Colors.black,
-                         ),
-                       ),
-                       ElevatedButton(
-                         style: ElevatedButton.styleFrom(
-                           backgroundColor: Colors.teal,
-                           minimumSize: const Size(120, 50),
-                         ),
-                         onPressed: () {
-                           setState(() {
-                             teamBPoints++;
-                            // print(teamBPoints);
-                           });
-                         },
-                         child: const Text('Add 1 Point',style: TextStyle(
-                           color: Colors.black,
-                           fontSize: 18,
-                         ),),
-                       ),
-                       ElevatedButton(
-                         style: ElevatedButton.styleFrom(
-                           backgroundColor: Colors.teal,
-                           minimumSize: const Size(120, 50),
-                         ),
-                         onPressed: () {
-                           setState(() {
-                             teamBPoints+=2;
-                            // print(teamBPoints);
-                           });
-                         },
-                         child: const Text('Add 2 Point',style: TextStyle(
-                           color: Colors.black,
-                           fontSize: 18,
-                         ),),
-                       ),
-                       ElevatedButton(
-                         style: ElevatedButton.styleFrom(
-                           backgroundColor: Colors.teal,
-                           minimumSize: const Size(120, 50),
-                         ),
-                         onPressed: () {
-                           setState(() {
-                             teamBPoints+=3;
-                             print(teamBPoints);
-                           });
-                         },
-                         child: const Text('Add 3 Point',style: TextStyle(
-                           color: Colors.black,
-                           fontSize: 18,
-                         ),),
-                       ),
-                     ],
-                   ),
-                 ),
-               ],
-             ),
-             ElevatedButton(
-               style: ElevatedButton.styleFrom(
-                 backgroundColor: Colors.teal,
-                 minimumSize: const Size(120, 50),
+         body: SingleChildScrollView(
+           child: Column(
+             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+             children: [
+               const SizedBox(
+                 height: 70,
                ),
-               onPressed: () {
-                 setState(() {
-                   teamAPoints=0;
-                   teamBPoints=0;
-                 });
-               },
-               child: const Text('Reset',style: TextStyle(
-                 color: Colors.black,
-                 fontSize: 18,
-               ),),
-             ),
-           ],
+               Row(
+                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                 children: [
+                   SizedBox(
+                     height: 450,
+                     child: Column(
+                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                       children: [
+                         const Text(
+                           'Team A',
+                           style: TextStyle(
+                             fontSize: 25,
+                             color: Colors.black,
+                           ),
+                         ),
+                         Text(
+                           '$teamAPoints',
+                           style: const TextStyle(
+                             fontSize: 90,
+                             color: Colors.black,
+                           ),
+                         ),
+                         ElevatedButton(
+                           style: ElevatedButton.styleFrom(
+                             backgroundColor: Colors.teal,
+                             minimumSize: const Size(120, 50),
+                           ),
+                           onPressed: () {
+                             setState(() {
+                               teamAPoints++;
+                              // print(teamAPoints);
+                             });
+                           },
+                           child: const Text('Add 1 Point',style: TextStyle(
+                             color: Colors.black,
+                             fontSize: 18,
+                           ),),
+                         ),
+                         ElevatedButton(
+                           style: ElevatedButton.styleFrom(
+                             backgroundColor: Colors.teal,
+                             minimumSize: const Size(120, 50),
+                           ),
+                           onPressed: () {
+                             setState(() {
+                               teamAPoints+=2;
+                              // print(teamAPoints);
+                             });
+                           },
+                           child: const Text('Add 2 Point',style: TextStyle(
+                             color: Colors.black,
+                             fontSize: 18,
+                           ),),
+                         ),
+                         ElevatedButton(
+                           style: ElevatedButton.styleFrom(
+                             backgroundColor: Colors.teal,
+                             minimumSize: const Size(120, 50),
+                           ),
+                           onPressed: () {
+                             setState(() {
+                               teamAPoints+=3;
+                              // print(teamAPoints);
+                             });
+                           },
+                           child: const Text('Add 3 Point',style: TextStyle(
+                             color: Colors.black,
+                             fontSize: 18,
+                           ),),
+                         ),
+                       ],
+                     ),
+                   ),
+                   SizedBox(
+                     height: 450,
+                     child: const VerticalDivider(
+                       color: Colors.grey,
+                       thickness: 1,
+                       indent: 50,
+                       endIndent: 50,
+                     ),
+                   ),
+                   SizedBox(
+                     height: 450,
+                     child: Column(
+                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                       children: [
+                         const Text(
+                           'Team B',
+                           style: TextStyle(
+                             fontSize: 25,
+                             color: Colors.black,
+                           ),
+                         ),
+                         Text(
+                           '$teamBPoints',
+                           style: const TextStyle(
+                             fontSize: 90,
+                             color: Colors.black,
+                           ),
+                         ),
+                         ElevatedButton(
+                           style: ElevatedButton.styleFrom(
+                             backgroundColor: Colors.teal,
+                             minimumSize: const Size(120, 50),
+                           ),
+                           onPressed: () {
+                             setState(() {
+                               teamBPoints++;
+                              // print(teamBPoints);
+                             });
+                           },
+                           child: const Text('Add 1 Point',style: TextStyle(
+                             color: Colors.black,
+                             fontSize: 18,
+                           ),),
+                         ),
+                         ElevatedButton(
+                           style: ElevatedButton.styleFrom(
+                             backgroundColor: Colors.teal,
+                             minimumSize: const Size(120, 50),
+                           ),
+                           onPressed: () {
+                             setState(() {
+                               teamBPoints+=2;
+                              // print(teamBPoints);
+                             });
+                           },
+                           child: const Text('Add 2 Point',style: TextStyle(
+                             color: Colors.black,
+                             fontSize: 18,
+                           ),),
+                         ),
+                         ElevatedButton(
+                           style: ElevatedButton.styleFrom(
+                             backgroundColor: Colors.teal,
+                             minimumSize: const Size(120, 50),
+                           ),
+                           onPressed: () {
+                             setState(() {
+                               teamBPoints+=3;
+                               print(teamBPoints);
+                             });
+                           },
+                           child: const Text('Add 3 Point',style: TextStyle(
+                             color: Colors.black,
+                             fontSize: 18,
+                           ),),
+                         ),
+                       ],
+                     ),
+                   ),
+                 ],
+               ),
+               ElevatedButton(
+                 style: ElevatedButton.styleFrom(
+                   backgroundColor: Colors.teal,
+                   minimumSize: const Size(120, 50),
+                 ),
+                 onPressed: () {
+                   setState(() {
+                     teamAPoints=0;
+                     teamBPoints=0;
+                   });
+                 },
+                 child: const Text('Reset',style: TextStyle(
+                   color: Colors.black,
+                   fontSize: 18,
+                 ),),
+               ),
+             ],
+           ),
          ),
        ),
      );
